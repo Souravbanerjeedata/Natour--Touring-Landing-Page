@@ -73,6 +73,7 @@ body {
   display: inline-block;
   background-clip: text;
   color: transparent;
+  letter-spacing: 2px;
   transition: all 0.2s; }
   .heading-secondary:hover {
     transform: skewX(15deg) skewY(2deg) scale(1.1);
