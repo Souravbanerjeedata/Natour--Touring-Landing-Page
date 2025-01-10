@@ -26,16 +26,18 @@
     top: 6.5rem;
     right: 6.5rem;
     z-index: 1000;
-    transform: scale(80);
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   }
 
   &__nav {
     height: 100vh;
-    width: 100%;
+    width: 0;
+    opacity: 0;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 1500;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   &__list {
@@ -74,5 +76,14 @@
       color: $color-primary;
       transform: translateX(1rem);
     }
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    width: 100%;
+    opacity: 1;
   }
 }
