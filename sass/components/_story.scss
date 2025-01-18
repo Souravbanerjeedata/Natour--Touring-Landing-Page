@@ -1,22 +1,25 @@
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
 .story {
   width: 75%;
   margin: 0 auto;
-  box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
-  background-color: rgba($color-white, 0.6);
+  box-shadow: 0 3rem 6rem rgba(variables.$color-black, 0.1);
+  background-color: rgba(variables.$color-white, 0.6);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
-  font-size: $default-font-size;
+  font-size: variables.$default-font-size;
   transform: skewX(-12deg);
   transition: all 0.5s;
 
-  @include respond(tab-port) {
+  @include mixins.respond(tab-port) {
     width: 100%;
     padding: 4rem;
     padding-left: 7rem;
   }
 
-  @include respond(phone) {
+  @include mixins.respond(phone) {
     transform: skewX(0);
   }
 
@@ -31,7 +34,7 @@
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
 
-    @include respond(phone) {
+    @include mixins.respond(phone) {
       transform: translateX(-3rem) skewX(0);
     }
   }
@@ -46,7 +49,7 @@
   &__text {
     transform: skewX(12deg);
 
-    @include respond(phone) {
+    @include mixins.respond(phone) {
       transform: skewX(0);
     }
   }
@@ -56,7 +59,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, 20%);
-    color: $color-white;
+    color: variables.$color-white;
     text-transform: uppercase;
     font-size: 1.7rem;
     text-align: center;

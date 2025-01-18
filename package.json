@@ -4,11 +4,11 @@
   "description": "Created using:",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "sass --watch sass/main.scss:css/style.css"
   },
   "author": "Sourav",
   "license": "ISC",
-  "devDependencies": {
-    "node-sass": "^9.0.0"
+  "dependencies": {
+    "sass": "^1.83.4"
   }
 }
